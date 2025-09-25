@@ -4,9 +4,9 @@
   - [Before you start](#before-you-start)
   - [General](#general)
   - [Case 1 - customer address modification on standard invoice](#case-1---customer-address-modification-on-standard-invoice)
-  - [Case 3 - barcode with the document number on the header](#case-3---barcode-with-the-document-number-on-the-header)
+  - [Case 2 - special notes added when needed](#case-2---special-notes-added-when-needed)
+  - [Case 3 - defined background for the printout of Sales Quote Lines](#case-3---defined-background-for-the-printout-of-sales-quote-lines)
   - [Case 4 - item picture on the line for sales order](#case-4---item-picture-on-the-line-for-sales-order)
-  - [Case 5 - special notes added when needed](#case-5---special-notes-added-when-needed)
     - [Useful information](#useful-information)
   
 # BC/AL Reports Workshop
@@ -36,6 +36,8 @@ Report is using **Integer** table to create number of dataitem as needed. So no 
 
 Keep in mind that layout is not formatted in a perfect way. The main purpose of that layout is to show how the structure of the data might impact on the final printout.
 
+Each Case has also BLANK report to play around with that when you add an extension directly to BC - not from your compiler.
+
 There is also an Excel layout. Data prepared for Word layout is not a perfect fit for Excel layouts, but thanks to that it is easy to show, that the same code can support both needs - having a printable document, and data for later analysis.
 
 ## Case 1 - customer address modification on standard invoice
@@ -46,7 +48,21 @@ We need to extend existing report and apply new layout to the solution.
 
 The customer wants also define that specific layout as a default one.
 
-## Case 3 - barcode with the document number on the header
+## Case 2 - special notes added when needed
+
+On the standard sales order confirmation printout the customer wants to have an additional text, but only when it is needed. 
+
+This need is defined by the customer when the report is being generated.
+
+## Case 3 - defined background for the printout of Sales Quote Lines
+
+Customer has a defined background for the sales quote printout. 
+
+They want to print only sales lines (including comment lines) and the total at the end of the whole document.
+
+They want to print only DESCRIPTION and the value without a tax.
+
+Last line must be the total tax for the document.
 
 ## Case 4 - item picture on the line for sales order
 
@@ -55,10 +71,6 @@ Customer wants to have an item picture on the line generated on the standard rep
 We need to extend existing report and apply new layout to the solution. 
 
 The customer wants also define that specific layout as a default one.
-
-## Case 5 - special notes added when needed
-
-
 
 ### Useful information
 
