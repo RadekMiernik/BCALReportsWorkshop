@@ -3,10 +3,10 @@
 - [Word layouts](#word-layouts)
   - [Before you start](#before-you-start)
   - [General](#general)
-  - [Case 1 - customer address modification on standard invoice](#case-1---customer-address-modification-on-standard-invoice)
+  - [Case 1 - customer address modification on the standard invoice](#case-1---customer-address-modification-on-the-standard-invoice)
   - [Case 2 - special notes added when needed](#case-2---special-notes-added-when-needed)
   - [Case 3 - defined background for the printout of Sales Quote Lines](#case-3---defined-background-for-the-printout-of-sales-quote-lines)
-  - [Case 4 - item picture on the line for sales order](#case-4---item-picture-on-the-line-for-sales-order)
+  - [Case 4 - item picture on the line for purchase order](#case-4---item-picture-on-the-line-for-purchase-order)
     - [Useful information](#useful-information)
   
 # BC/AL Reports Workshop
@@ -40,13 +40,13 @@ Each Case has also BLANK report to play around with that when you add an extensi
 
 There is also an Excel layout. Data prepared for Word layout is not a perfect fit for Excel layouts, but thanks to that it is easy to show, that the same code can support both needs - having a printable document, and data for later analysis.
 
-## Case 1 - customer address modification on standard invoice
+## Case 1 - customer address modification on the standard invoice
 
 The customer wants to have a value from **Pre Assigned** field exactly below the customer address on the printout.
 
-We need to extend existing report and apply new layout to the solution. 
+We need to extend the existing report and apply a new layout to the solution. 
 
-The customer wants also define that specific layout as a default one.
+The customer also wants to define that specific layout as a default one.
 
 ## Case 2 - special notes added when needed
 
@@ -64,13 +64,13 @@ They want to print only DESCRIPTION and the value without a tax.
 
 Last line must be the total tax for the document.
 
-## Case 4 - item picture on the line for sales order
+## Case 4 - item picture on the line for purchase order
 
-Customer wants to have an item picture on the line generated on the standard report for purchase order.
+Customer wants to have an item picture on the line generated on the standard report for the purchase order.
 
-We need to extend existing report and apply new layout to the solution. 
+We need to extend the existing report and apply a new layout to the solution. 
 
-The customer wants also define that specific layout as a default one.
+The customer also wants to define that specific layout as a default one.
 
 ### Useful information
 

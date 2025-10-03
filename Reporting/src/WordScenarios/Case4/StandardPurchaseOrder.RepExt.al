@@ -17,12 +17,12 @@ reportextension 50101 "MNB Standard Purchase - Order" extends "Standard Purchase
 
     rendering
     {
-        layout(StandardSalesInvoiceCase1)
+        layout(StandardPurchaseOrderCase1)
         {
             Type = Word;
             Caption = 'Standard - Purchase Order Case 4';
             Summary = 'Standard - Purchase Order Case 4';
-            LayoutFile = './src/Scenarios/Case4/StandardPurchaseOrderCase4.docx';
+            LayoutFile = './src/WordScenarios/Case4/StandardPurchaseOrderCase4.docx';
         }
     }
 

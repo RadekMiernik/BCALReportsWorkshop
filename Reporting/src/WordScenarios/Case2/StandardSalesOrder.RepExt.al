@@ -46,7 +46,7 @@ reportextension 50103 "MNB Standard Sales - Order" extends "Standard Sales - Ord
             Type = Word;
             Caption = 'Standard - Sales Order Confirmation Case 2';
             Summary = 'Standard - Sales Order Confirmation Case 2';
-            LayoutFile = './src/Scenarios/Case2/StandardSalesOrderConfCase2.docx';
+            LayoutFile = './src/WordScenarios/Case2/StandardSalesOrderConfCase2.docx';
         }
     }
 
