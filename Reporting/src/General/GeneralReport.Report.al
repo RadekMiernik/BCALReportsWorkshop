@@ -137,7 +137,7 @@ report 50102 "MNB General Report"
     }
     requestpage
     {
-        // SaveValues = true; //use to save last probvided values
+        // SaveValues = true; //use to save last provided values
         layout
         {
             area(Content)
@@ -169,6 +169,13 @@ report 50102 "MNB General Report"
         {
             Caption = 'General Report (Word)';
             LayoutFile = './src/General/GeneralReport.docx';
+            Summary = 'The General Report (Word) provides a simple layout that is also relatively easy for an end-user to modify.';
+            Type = Word;
+        }
+        layout("GeneralReportNEW.docx")
+        {
+            Caption = 'General Report (Word) NEW';
+            LayoutFile = './src/General/GeneralReportNEW.docx';
             Summary = 'The General Report (Word) provides a simple layout that is also relatively easy for an end-user to modify.';
             Type = Word;
         }

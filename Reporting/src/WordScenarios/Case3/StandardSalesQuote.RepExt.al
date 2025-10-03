@@ -36,14 +36,14 @@ reportextension 50102 "MNB Standard Sales Quote" extends "Standard Sales - Quote
             Type = Word;
             Caption = 'Standard - Sales Quote Case 3';
             Summary = 'Standard - Sales Quote Case 3';
-            LayoutFile = './src/Scenarios/Case3/StandardSalesQuoteCase3.docx';
+            LayoutFile = './src/WordScenarios/Case3/StandardSalesQuoteCase3.docx';
         }
         layout(StandardSalesQuoteCase3BLANK)
         {
             Type = Word;
             Caption = 'Standard - Sales Quote Case 3 BLANK';
             Summary = 'Standard - Sales Quote Case 3 BLANK';
-            LayoutFile = './src/Scenarios/Case3/StandardSalesQuoteCase3BLANK.docx';
+            LayoutFile = './src/WordScenarios/Case3/StandardSalesQuoteCase3BLANK.docx';
         }
     }
 

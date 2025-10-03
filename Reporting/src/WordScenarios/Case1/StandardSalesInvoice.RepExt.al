@@ -34,7 +34,7 @@ reportextension 50100 "MNB Standard Sales - Invoice" extends "Standard Sales - I
             Type = Word;
             Caption = 'Standard - Sales Invoice Case 1';
             Summary = 'Standard - Sales Invoice Case 1';
-            LayoutFile = './src/Scenarios/Case1/StandardInvoiceCase1.docx';
+            LayoutFile = './src/WordScenarios/Case1/StandardInvoiceCase1.docx';
         }
     }
 
