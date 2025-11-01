@@ -13,6 +13,7 @@ reportextension 50100 "MNB Standard Sales - Invoice" extends "Standard Sales - I
             column(MNBCustomerAddress7; MNBCustAddr[7]) { }
             column(MNBCustomerAddress8; MNBCustAddr[8]) { }
             column(MNBCustomerAddress9; MNBCustAddr[9]) { }
+            column(MNBPreAssignedNo; Header."Pre-Assigned No.") { }
         }
         modify(header)
         {
@@ -31,11 +32,18 @@ reportextension 50100 "MNB Standard Sales - Invoice" extends "Standard Sales - I
     {
         layout(StandardSalesInvoiceCase1)
         {
-            Type = Word;
             Caption = 'Standard - Sales Invoice Case 1';
-            Summary = 'Standard - Sales Invoice Case 1';
             LayoutFile = './src/WordScenarios/Case1/StandardInvoiceCase1.docx';
+            Summary = 'Standard - Sales Invoice Case 1';
+            Type = Word;
         }
+        // layout(LiveStandardSalesInvoiceCase1)
+        // {
+        //     Caption = 'Live Standard - Sales Invoice Case 1';
+        //     LayoutFile = './src/WordScenarios/Case1/LiveStandardInvoiceCase1.docx';
+        //     Summary = 'Live Standard - Sales Invoice Case 1';
+        //     Type = Word;
+        // }
     }
 
     var

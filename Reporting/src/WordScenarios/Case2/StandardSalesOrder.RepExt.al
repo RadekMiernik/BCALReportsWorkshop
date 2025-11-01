@@ -32,9 +32,9 @@ reportextension 50103 "MNB Standard Sales - Order" extends "Standard Sales - Ord
             {
                 field(MNBPrintStatement; PrintStatement)
                 {
+                    ApplicationArea = All;
                     Caption = 'Print Statement';
                     ToolTip = 'Defines if additional statement is added to the printout.';
-                    ApplicationArea = All;
                 }
             }
         }
@@ -43,11 +43,18 @@ reportextension 50103 "MNB Standard Sales - Order" extends "Standard Sales - Ord
     {
         layout(StandardSalesOrderCase2)
         {
-            Type = Word;
             Caption = 'Standard - Sales Order Confirmation Case 2';
-            Summary = 'Standard - Sales Order Confirmation Case 2';
             LayoutFile = './src/WordScenarios/Case2/StandardSalesOrderConfCase2.docx';
+            Summary = 'Standard - Sales Order Confirmation Case 2';
+            Type = Word;
         }
+        // layout(LiveStandardSalesOrderCase2)
+        // {
+        //     Caption = 'Live Standard - Sales Order Confirmation Case 2';
+        //     LayoutFile = './src/WordScenarios/Case2/LiveStandardSalesOrderConfCase2.docx';
+        //     Summary = 'Live Standard - Sales Order Confirmation Case 2';
+        //     Type = Word;
+        // }
     }
 
     var
