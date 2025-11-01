@@ -3,8 +3,8 @@ report 50100 "MNB Invoiced Items"
     ApplicationArea = All;
     Caption = 'Invoiced Items';
     DefaultRenderingLayout = "InvoicedItems.xlsx";
-    UsageCategory = ReportsAndAnalysis;
     ExcelLayoutMultipleDataSheets = true;
+    UsageCategory = ReportsAndAnalysis;
 
     dataset
     {
@@ -21,7 +21,7 @@ report 50100 "MNB Invoiced Items"
             column(Unit_Price; "Unit Price") { }
             column(Line_Amount; "Line Amount") { }
             column(Amount_Including_VAT; "Amount Including VAT") { }
-            column(Description; Description) { }
+            column(Description; Description) { } // not added originally to workshop version of layout
         }
         dataitem(Customer; Customer)
         {
@@ -30,6 +30,7 @@ report 50100 "MNB Invoiced Items"
             column(CustomerNo_; "No.") { }
             column(Name; Name) { }
             column(City; City) { }
+            column(Address; Address) { }
         }
     }
 
@@ -39,6 +40,13 @@ report 50100 "MNB Invoiced Items"
         {
             Caption = 'Invoiced Items (Excel)';
             LayoutFile = './src/ExcelScenarios/Case1/InvoicedItems.xlsx';
+            Summary = 'The Excel report with all invoiced items in our company.';
+            Type = Excel;
+        }
+        layout("InvoicedItemsWorkshop.xlsx")
+        {
+            Caption = 'Invoiced Items (Excel) Workshop';
+            LayoutFile = './src/ExcelScenarios/Case1/InvoicedItemsWorkshop.xlsx';
             Summary = 'The Excel report with all invoiced items in our company.';
             Type = Excel;
         }

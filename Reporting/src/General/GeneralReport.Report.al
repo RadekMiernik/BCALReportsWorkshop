@@ -63,8 +63,8 @@ report 50102 "MNB General Report"
                             // add columns here if needed
                             #region LINE SPECIFICATION DETAILS ITEMS
                             column(LineSpecificationDetailNumber; Number) { }
-                            column(LineSpecificationDetailValue1; 'Line Spec Detail Value 1 - ' + Format(LineSpecificationDetails.Number)) { }
-                            column(LineSpecificationDetailValue2; 'Line Spec Detail Value 2 - ' + Format(LineSpecificationDetails.Number)) { }
+                            column(LineSpecificationDetailValue1; 'Line Spec Detail Value 1 - ' + Format(LineDetails.Number)) { }
+                            column(LineSpecificationDetailValue2; 'Line Spec Detail Value 2 - ' + Format(LineDetails.Number)) { }
                             column(LineSpecificationDetailValue3; 1) { } //to count number of lines in excel
                             #endregion
 
@@ -169,13 +169,6 @@ report 50102 "MNB General Report"
         {
             Caption = 'General Report (Word)';
             LayoutFile = './src/General/GeneralReport.docx';
-            Summary = 'The General Report (Word) provides a simple layout that is also relatively easy for an end-user to modify.';
-            Type = Word;
-        }
-        layout("GeneralReportNEW.docx")
-        {
-            Caption = 'General Report (Word) NEW';
-            LayoutFile = './src/General/GeneralReportNEW.docx';
             Summary = 'The General Report (Word) provides a simple layout that is also relatively easy for an end-user to modify.';
             Type = Word;
         }

@@ -13,7 +13,7 @@ query 50100 "MNB Item"
         dataitem(item; Item)
         {
             column(no; "No.") { }
-            column(descritpion; Description) { }
+            column(description; Description) { }
         }
     }
 }

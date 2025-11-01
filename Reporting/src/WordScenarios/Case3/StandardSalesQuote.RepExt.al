@@ -11,7 +11,6 @@ reportextension 50102 "MNB Standard Sales Quote" extends "Standard Sales - Quote
         }
         modify(Line)
         {
-
             trigger OnAfterAfterGetRecord()
             begin
                 if FormattedLineAmount <> '' then
@@ -28,23 +27,44 @@ reportextension 50102 "MNB Standard Sales Quote" extends "Standard Sales - Quote
         {
             column(MNBCurrencySymbol; MNBCurrencySymbol) { }
         }
+        addlast(Line)
+        {
+            dataitem(MNBCommentLines; Integer)
+            {
+                DataItemTableView = sorting(Number) where(Number = const(1));
+                PrintOnlyIfDetail = true;
+
+                dataitem(MNBCommentLine; Integer)
+                {
+                    DataItemTableView = sorting(Number) where(Number = const(1));
+                    column(MNBCommentLineValue; CommentLine) { }
+                }
+
+                trigger OnAfterGetRecord()
+                begin
+                    GetCommentLines();
+                    if CommentLine = '' then
+                        CurrReport.Break();
+                end;
+            }
+        }
     }
     rendering
     {
         layout(StandardSalesQuoteCase3)
         {
-            Type = Word;
             Caption = 'Standard - Sales Quote Case 3';
-            Summary = 'Standard - Sales Quote Case 3';
             LayoutFile = './src/WordScenarios/Case3/StandardSalesQuoteCase3.docx';
-        }
-        layout(StandardSalesQuoteCase3BLANK)
-        {
+            Summary = 'Standard - Sales Quote Case 3';
             Type = Word;
-            Caption = 'Standard - Sales Quote Case 3 BLANK';
-            Summary = 'Standard - Sales Quote Case 3 BLANK';
-            LayoutFile = './src/WordScenarios/Case3/StandardSalesQuoteCase3BLANK.docx';
         }
+        // layout(LiveStandardSalesQuoteCase3)
+        // {
+        //     Caption = 'Live Standard - Sales Quote Case 3';
+        //     LayoutFile = './src/WordScenarios/Case3/LiveStandardSalesQuoteCase3.docx';
+        //     Summary = 'Live Standard - Sales Quote Case 3';
+        //     Type = Word;
+        // }
     }
 
     var
@@ -76,15 +96,15 @@ reportextension 50102 "MNB Standard Sales Quote" extends "Standard Sales - Quote
         SalesCommentLine.SetRange("No.", Line."Document No.");
         SalesCommentLine.SetRange("Document Line No.", Line."Line No.");
 
-        if SalesCommentLine.FindSet() then begin
-            CommentLine := CommentLine + NewLineChar + NewLineChar;
+        if SalesCommentLine.FindSet() then //begin
+            // CommentLine := CommentLine + NewLineChar + NewLineChar;
             repeat
                 if (SalesCommentLine.Comment = '') or (SalesCommentLine.Comment = ' ') then
                     CommentLine := CommentLine + NewLineChar + NewLineChar
                 else
                     CommentLine += SalesCommentLine.Comment;
             until SalesCommentLine.Next() = 0;
-            CommentLine := CommentLine + NewLineChar + NewLineChar;
-        end;
+            // CommentLine := CommentLine + NewLineChar + NewLineChar;
+        // end;
     end;
 }
